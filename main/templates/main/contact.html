@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Contact | [Firm Name]{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="contact-info">
+        <h1>
+            <span class="accent">Contact</span> Us
+        </h1>
+        <p>
+            Interested in working together or have a question?<br><br>
+            Fill out the form or use the info below.
+        </p>
+        <ul class="contact-details">
+            <li>
+                <strong>Email:</strong>
+                <a href="mailto:info@firmname.com">info@firmname.com</a>
+            </li>
+            <li>
+                <strong>Phone:</strong>
+                <a href="tel:+46701234567">+46 70 123 45 67</a>
+            </li>
+            <li>
+                <strong>Office:</strong>
+                <span>Storgatan 1, 114 55 Stockholm</span>
+            </li>
+        </ul>
+    </div>
+    <div class="contact-form-area">
+        <form class="contact-form" method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-illustration">
+            <img src="{% static 'main/images/buildings.svg' %}" alt="Contact Illustration">
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Building Consultant | Emanuel's Building Firm{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo-area">
+            <a href="{% url 'home' %}" class="nav-logo">
+                <img src="{% static 'main/images/buildings.svg' %}" alt="Building Logo" class="logo-img">
+                <span>Emanuel's Building Firm</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+            <li><a href="{% url 'team' %}">Team</a></li>
+            <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'contact' %}" class="cta-btn">Book a Consultation</a></li>
+        </ul>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Default hero section, override on subpages -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>
+                    Shaping the Skyline.<br>
+                    <span class="accent">Building the Future.</span>
+                </h1>
+                <p>Your trusted partner in modern construction consultancy & engineering excellence.</p>
+                <a href="{% url 'contact' %}" class="hero-cta">Let's Work Together</a>
+            </div>
+            <img src="{% static 'main/images/buildings.svg' %}" alt="Modern Building" class="hero-svg" draggable="false">
+        </section>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span>&copy; {{ now|date:"Y" }} Emanuel's Building Firm. All Rights Reserved.</span>
+            <span class="footer-social">
+                <!-- Social links/icons go here -->
+            </span>
+        </div>
+    </footer>
+
+    <script src="{% static 'main/js/main.js' %}"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

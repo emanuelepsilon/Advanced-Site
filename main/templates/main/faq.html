@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}FAQ | [Firm Name]{% endblock %}
+
+{% block content %}
+<section class="faq-main">
+    <h1>
+        <span class="accent">Frequently</span> Asked Questions
+    </h1>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">What kind of consulting services do you offer?</button>
+            <div class="faq-answer">
+                We provide building consulting, project management, design guidance, and sustainability advisory for projects of any scale.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Where do you operate?</button>
+            <div class="faq-answer">
+                Our main office is in Stockholm, but we take on projects across Sweden and internationally on request.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How do I request a proposal?</button>
+            <div class="faq-answer">
+                Use our <a href="{% url 'contact' %}">contact page</a> to reach out, or email us directly. We’ll schedule an initial meeting to discuss your needs.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Do you help with permits and legal requirements?</button>
+            <div class="faq-answer">
+                Yes! We guide you through planning, permits, and compliance so your project proceeds smoothly.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can you manage projects outside the building industry?</button>
+            <div class="faq-answer">
+                We specialize in construction and property development, but we’re happy to discuss adjacent fields—contact us!
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Testimonials | [Firm Name]{% endblock %}
+
+{% block content %}
+<section class="testimonials-main">
+    <h1>
+        <span class="accent">What</span> Clients Say
+    </h1>
+    <div class="testimonials-slider">
+        <div class="testimonial-card active">
+            <div class="testimonial-quote">“Outstanding project management and crystal-clear communication. Our new office was delivered early and under budget.”</div>
+            <div class="testimonial-author">
+                <img src="{% static 'main/images/avatar1.svg' %}" alt="Client 1">
+                <div>
+                    <strong>Emma Nilsson</strong><br>
+                    CEO, TechNode AB
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-quote">“The consulting team solved problems others couldn’t. They guided us every step of the way.”</div>
+            <div class="testimonial-author">
+                <img src="{% static 'main/images/avatar2.svg' %}" alt="Client 2">
+                <div>
+                    <strong>Jonas Persson</strong><br>
+                    Head of Projects, Skanska
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-quote">“Incredible attention to detail and top-tier design. Our hotel is now a landmark!”</div>
+            <div class="testimonial-author">
+                <img src="{% static 'main/images/avatar3.svg' %}" alt="Client 3">
+                <div>
+                    <strong>Sofia Eriksson</strong><br>
+                    Owner, Aurora Boutique Hotel
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-slider-controls">
+            <button class="testimonial-prev" aria-label="Previous testimonial">&#8592;</button>
+            <button class="testimonial-next" aria-label="Next testimonial">&#8594;</button>
+        </div>
+    </div>
+</section>
+{% endblock %}

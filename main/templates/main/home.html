@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Home - Building Consultant{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Bringing <span class="accent">Modern</span> Building Consulting<br>
+            to Your Projects.
+        </h1>
+        <p>
+            Unlock innovative solutions and expert advice for every stage of your construction journey.<br>
+            Discover why leading firms trust us for consulting, design, management, and inspections.
+        </p>
+        <a href="{% url 'contact' %}" class="hero-cta">Get in Touch</a>
+    </div>
+    <img src="{% static 'main/images/buildings.svg' %}" alt="Buildings" class="hero-svg">
+</section>
+{% endblock %}

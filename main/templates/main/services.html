@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Our Services | [Firm Name]{% endblock %}
+
+{% block content %}
+<section class="services-section">
+    <h1 class="services-title">
+        <span class="accent">Our</span> Services
+    </h1>
+    <p class="services-subtitle">
+        Premium solutions for every stage of your building project—expert consulting, design, management, and inspection.
+    </p>
+    <div class="services-grid">
+        <div class="service-card">
+            <img src="{% static 'main/images/consulting.svg' %}" alt="Consulting" class="service-icon">
+            <h2>Consulting</h2>
+            <p>Strategic advice and feasibility studies to optimize your project from day one.</p>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'main/images/design.svg' %}" alt="Design" class="service-icon">
+            <h2>Design</h2>
+            <p>Innovative architectural and engineering design tailored to your vision and needs.</p>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'main/images/management.svg' %}" alt="Management" class="service-icon">
+            <h2>Project Management</h2>
+            <p>End-to-end project management—on-time, on-budget, and quality-assured.</p>
+        </div>
+        <div class="service-card">
+            <img src="{% static 'main/images/inspection.svg' %}" alt="Inspection" class="service-icon">
+            <h2>Inspection</h2>
+            <p>Comprehensive site inspections and reporting for total peace of mind.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Portfolio | [Firm Name]{% endblock %}
+
+{% block content %}
+<div class="portfolio-main">
+    <h1>
+        <span class="accent">Our</span> Projects
+    </h1>
+    <div class="portfolio-intro">
+        A sample of our completed and ongoing projects.<br>
+        Each showcases our commitment to quality, innovation, and client satisfaction.
+    </div>
+    <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-card">
+            <img src="{% static 'main/images/buildings.svg' %}" alt="Luxury Residential Tower">
+            <div class="portfolio-details">
+                <h2>Luxury Residential Tower</h2>
+                <div class="portfolio-meta">Stockholm, Sweden &middot; 2023</div>
+                <p>Full-service consulting, design management, and quality assurance for a 22-story ultra-modern apartment tower.</p>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="portfolio-card">
+            <img src="{% static 'main/images/management.svg' %}" alt="Corporate HQ">
+            <div class="portfolio-details">
+                <h2>Corporate HQ & Office Campus</h2>
+                <div class="portfolio-meta">Malmö, Sweden &middot; 2022</div>
+                <p>Turnkey project management, from blueprint to move-in, for a LEED Platinum sustainable office complex.</p>
+            </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="portfolio-card">
+            <img src="{% static 'main/images/design.svg' %}" alt="Boutique Hotel">
+            <div class="portfolio-details">
+                <h2>Boutique Hotel Renovation</h2>
+                <div class="portfolio-meta">Copenhagen, Denmark &middot; 2022</div>
+                <p>Design advisory and construction support for a historic building converted into a modern luxury hotel.</p>
+            </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="portfolio-card">
+            <img src="{% static 'main/images/consulting.svg' %}" alt="Industrial Park">
+            <div class="portfolio-details">
+                <h2>Industrial Park Consulting</h2>
+                <div class="portfolio-meta">Gothenburg, Sweden &middot; 2021</div>
+                <p>Strategic consulting and inspection for a 10-hectare advanced manufacturing and logistics center.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

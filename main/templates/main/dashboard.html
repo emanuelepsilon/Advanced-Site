@@ -1,0 +1,57 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Dashboard | [Firm Name]{% endblock %}
+
+{% block content %}
+<section class="dashboard-main">
+    <h1>
+        <span class="accent">Admin</span> Dashboard
+    </h1>
+    <div class="dashboard-cards">
+        <div class="dashboard-card">
+            <div class="dashboard-icon">
+                <img src="{% static 'main/images/management.svg' %}" alt="Projects">
+            </div>
+            <div class="dashboard-stat">7</div>
+            <div class="dashboard-label">Active Projects</div>
+        </div>
+        <div class="dashboard-card">
+            <div class="dashboard-icon">
+                <img src="{% static 'main/images/contact.svg' %}" alt="New Messages">
+            </div>
+            <div class="dashboard-stat">3</div>
+            <div class="dashboard-label">New Messages</div>
+        </div>
+        <div class="dashboard-card">
+            <div class="dashboard-icon">
+                <img src="{% static 'main/images/portfolio.svg' %}" alt="Completed Projects">
+            </div>
+            <div class="dashboard-stat">18</div>
+            <div class="dashboard-label">Completed Projects</div>
+        </div>
+        <div class="dashboard-card">
+            <div class="dashboard-icon">
+                <img src="{% static 'main/images/consulting.svg' %}" alt="Clients">
+            </div>
+            <div class="dashboard-stat">12</div>
+            <div class="dashboard-label">Clients</div>
+        </div>
+    </div>
+
+    <div class="dashboard-widgets">
+        <div class="dashboard-widget dashboard-welcome">
+            <h2>Welcome back, Emanuel!</h2>
+            <p>Here’s an overview of your firm’s current status. Need to update your portfolio or check new messages? Use the links above or in the navigation.</p>
+        </div>
+        <div class="dashboard-widget dashboard-activity">
+            <h3>Recent Activity</h3>
+            <ul>
+                <li>New message from Skanska (5 min ago)</li>
+                <li>“Corporate HQ” project status changed to <b>Completed</b></li>
+                <li>Emma Nilsson booked a call (yesterday)</li>
+                <li>Permit approved for Aurora Hotel (2 days ago)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About Us | [Firm Name]{% endblock %}
+
+{% block content %}
+<div class="about-hero">
+    <div class="about-image">
+        <img src="{% static 'main/images/consulting.svg' %}" alt="About Our Team">
+    </div>
+    <div class="about-text">
+        <h1>
+            <span class="accent">About</span> Emanuel's Building Firm
+        </h1>
+        <p>
+            Emanuel's Building Firm is a leading building consulting firm dedicated to delivering modern, innovative, and sustainable solutions for construction and real estate projects. With decades of combined experience, our team bridges technical expertise and design excellence to exceed every client’s expectations.
+        </p>
+        <ul class="about-list">
+            <li>✔️ Comprehensive building consulting and project management</li>
+            <li>✔️ Architectural and engineering design guidance</li>
+            <li>✔️ Sustainability and green building advisory</li>
+            <li>✔️ Quality assurance, inspection, and reporting</li>
+            <li>✔️ Client-focused from planning to completion</li>
+        </ul>
+        <a href="{% url 'services' %}" class="about-cta">Our Services</a>
+    </div>
+</div>
+{% endblock %}
